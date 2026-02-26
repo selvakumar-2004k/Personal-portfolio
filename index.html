@@ -1876,8 +1876,14 @@ const statsSection = document.getElementById('stats');
 if (statsSection) statsObserver.observe(statsSection);
 
 // EmailJS Configuration
+// values should come from environment variables (e.g. from .env)
+// during build/deployment these can be replaced or injected.
+const EMAILJS_SERVICE_ID = "service_5x6gr6u";     // process.env.REACT_APP_EMAILJS_SERVICE_ID
+const EMAILJS_TEMPLATE_ID = "template_pe75flc";   // process.env.REACT_APP_EMAILJS_TEMPLATE_ID
+const EMAILJS_PUBLIC_KEY = "RcXDet8608RsGfFZR";  // process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+
 (function(){
-  emailjs.init("RcXDet8608RsGfFZR");
+  emailjs.init(EMAILJS_PUBLIC_KEY);
 })();
 
 // Contact form with EmailJS
@@ -1885,8 +1891,8 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
 
   emailjs.sendForm(
-    "service_5x6gr6u",
-    "template_pe75flc",
+    EMAILJS_SERVICE_ID,
+    EMAILJS_TEMPLATE_ID,
     this
   ).then(function() {
     const success = document.getElementById('form-success');
