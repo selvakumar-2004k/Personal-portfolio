@@ -1878,7 +1878,7 @@ if (statsSection) statsObserver.observe(statsSection);
 
 
 (function(){
-  emailjs.init(EMAILJS_PUBLIC_KEY);
+  emailjs.init('eTUTEtfDIvrSvGLbo');
 })();
 
 // Contact form with EmailJS
@@ -1886,8 +1886,8 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
 
   emailjs.sendForm(
-    EMAILJS_SERVICE_ID,
-    EMAILJS_TEMPLATE_ID,
+    'service_zxttpua',
+    'template_gh8g56d',
     this
   ).then(function() {
     const success = document.getElementById('form-success');
