@@ -1215,10 +1215,10 @@
         <span>View Projects</span>
         <span>→</span>
       </a>
-      <a href="assets/Selvakumar(CV).pdf" class="btn-outline" id="resume-btn">
-        <span>⬇</span>
-        <span>Download Resume</span>
-      </a>
+<a href="assets/Selvakumar(CV).pdf" download="Selvakumar_Resume.pdf" class="btn-outline" id="resume-btn">
+  <span>⬇</span>
+  <span>Download Resume</span>
+</a>
       <a href="#contact" class="btn-outline">
         <span>✉</span>
         <span>Let's Talk</span>
@@ -1903,11 +1903,11 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   });
 });
 
-// Resume download
-document.getElementById('resume-btn').addEventListener('click', (e) => {
-  e.preventDefault();
-  alert('Resume download will be available once connected to your actual resume file!');
-});
+// // Resume download
+// document.getElementById('resume-btn').addEventListener('click', (e) => {
+//   e.preventDefault();
+//   alert('Resume download will be available once connected to your actual resume file!');
+// });
 
 // Smooth scroll for all hash links
 document.querySelectorAll('a[href^="#"]').forEach(a => {
